@@ -11,7 +11,7 @@ const Navbar = () => {
     const trimmedQuery = query.trim();
     if (trimmedQuery) {
       navigate(`/explore?search=${encodeURIComponent(trimmedQuery)}`);
-      setQuery(""); // limpiar input si quieres
+      setQuery("");
     }
   };
 
