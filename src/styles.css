@@ -1,4 +1,4 @@
-/* === RESET & BASE === */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -112,7 +112,7 @@ a {
   z-index: 999;
 }
 
-/* Mejoras buscador */
+
 .search-input {
   flex: 1;
   max-width: 600px;
@@ -135,7 +135,7 @@ a {
   background-color: white;
 }
 
-/* === IMAGE GALLERY (MASONRY GRID) === */
+
 .image-grid {
   column-count: 5;
   column-gap: 1rem;
@@ -163,7 +163,7 @@ a {
   box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
 }
 
-/* === PAGE TITLE === */
+
 .page-title {
   text-align: center;
   font-size: 2.5rem;
@@ -173,7 +173,7 @@ a {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* === LOAD MORE BUTTON === */
+
 .load-more-container {
   text-align: center;
   margin: 2rem 0 3rem;
@@ -199,7 +199,7 @@ a {
   opacity: 0.6;
 }
 
-/* === RESPONSIVE === */
+
 @media (max-width: 1200px) {
   .image-grid {
     column-count: 4;
