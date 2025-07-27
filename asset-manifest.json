@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pinterest-clone/static/css/main.534894b2.css",
+    "main.js": "/pinterest-clone/static/js/main.ac522678.js",
+    "static/js/453.980a17b8.chunk.js": "/pinterest-clone/static/js/453.980a17b8.chunk.js",
+    "index.html": "/pinterest-clone/index.html",
+    "main.534894b2.css.map": "/pinterest-clone/static/css/main.534894b2.css.map",
+    "main.ac522678.js.map": "/pinterest-clone/static/js/main.ac522678.js.map",
+    "453.980a17b8.chunk.js.map": "/pinterest-clone/static/js/453.980a17b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.534894b2.css",
+    "static/js/main.ac522678.js"
+  ]
+}
