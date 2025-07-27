@@ -1,0 +1,239 @@
+/* === RESET & BASE === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin-left: 60px; /* espacio para el sidebar */
+  margin-top: 60px;  /* espacio para el topbar */
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 60px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  color: #e60023;
+  font-size: 2rem;
+}
+
+.logo-icon {
+  background-color: #e60023;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.sidebar-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.sidebar-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: #f5f5f5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, transform 0.2s ease;
+  position: relative;
+  color: black;
+}
+
+.sidebar-icon:hover {
+  background: #e2e2e2;
+  transform: scale(1.15);
+}
+
+/* Punto rojo de notificación */
+.notification .dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* Icono activo (opcional) */
+.sidebar-icon.active {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* Ajustes para el icono de configuración abajo */
+.sidebar-settings {
+  margin-bottom: 1rem;
+}
+
+/* === TOPBAR (NAVBAR) === */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 60px;
+  height: 60px;
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  z-index: 999;
+}
+
+/* Mejoras buscador */
+.search-input {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 20px 10px 40px; /* espacio para icono */
+  font-size: 1rem;
+  border-radius: 9999px; /* borde súper redondeado */
+  border: 1px solid #ddd;
+  background-color: #f5f5f7;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #e60023;
+  box-shadow: 0 0 5px rgba(230, 0, 35, 0.5);
+  background-color: white;
+}
+
+/* === IMAGE GALLERY (MASONRY GRID) === */
+.image-grid {
+  column-count: 5;
+  column-gap: 1rem;
+  padding: 1rem;
+  margin-left: 60px;
+}
+
+.image-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.image-item img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.image-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* === PAGE TITLE === */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin: 1.5rem 0 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === LOAD MORE BUTTON === */
+.load-more-container {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.load-more-button {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  background-color: #e60023;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-button:hover:not(:disabled) {
+  background-color: #b4001b;
+}
+
+.load-more-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+  .image-grid {
+    column-count: 4;
+  }
+}
+
+@media (max-width: 900px) {
+  .image-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .topbar {
+    left: 0;
+    width: 100%;
+  }
+
+  .container {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+
+  .image-grid {
+    column-count: 2;
+    margin-left: 0;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
